@@ -1,0 +1,69 @@
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+              <strong>Add New User</strong>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="userForm" (ngSubmit)="submit()">
+                    <div class="row">
+                        <div class="col-lg-6  offset-lg-3">
+                            
+                                <div class="form-group">
+                                 <label for="nf-email">Full Name</label>
+                                 <input type="email" formControlName="fullName" name="nf-email" class="form-control" placeholder="Enter User Name.." autocomplete="email">
+                                </div>
+
+                                <div class="form-group">
+                                 <label for="nf-password">Email</label>
+                                 <input type="email"  formControlName="email" class="form-control" placeholder="Enter Email.." autocomplete="current-password">
+                                 <div class="error" *ngIf="submited && getControls.email.errors">
+                                     <span *ngIf="getControls.email.errors.required">Email is required.</span>
+                                     <span *ngIf="getControls.email.errors.email">Enter valid email address.</span>
+                                 </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-phone">Phone Number</label>
+                                    <input type="text" formControlName="phone"  class="form-control" placeholder="Enter Phone Number.." autocomplete="current-password">
+                                    <div class="error" *ngIf="submited && getControls.phone.errors">
+                                        <span *ngIf="getControls.phone.errors.required">Phone number is required.</span>
+                                        <span *ngIf="getControls.phone.errors.pattern">Enter valid phone number.</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-password">Password</label>
+                                    <input type="password" formControlName="password" class="form-control" placeholder="Enter Password.." autocomplete="current-password">
+                                    <div class="error" *ngIf="submited && getControls.password.errors">
+                                        <span *ngIf="getControls.password.errors.required">Password is required.</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-password">Confirm Password</label>
+                                    <input type="password" formControlName="confirmPass"  class="form-control" placeholder="Enter Confirm Password.." autocomplete="current-password">
+                                    <div class="error" *ngIf="submited && getControls.confirmPass.errors">
+                                        <span *ngIf="getControls.confirmPass.errors.required">Confirm Password is required.</span>
+                                      </div>
+                                      <span class="error"  *ngIf="submited && ConfirmPassErr && !getControls.confirmPass.errors">{{ConfirmPassErr}}.</span>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-center">
+                                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                <button type="reset" class="btn btn-sm btn-danger" (click)="newUserForm()"><i class="fa fa-ban"></i> Reset</button>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="card-footer">
+            </div> -->
+          </div>
+      </div>
+      <!--/.col-->
+    </div>
+  </div>
+  

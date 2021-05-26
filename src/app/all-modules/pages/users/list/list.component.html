@@ -1,0 +1,99 @@
+<div class="animated fadeIn">
+    <div class="row">
+      <!--/.col-->
+      <div class="col-md-12">
+        <p class="text-right">
+          <button class="btn btn-success" routerLink="/users/add">Add USer</button>
+        </p>
+      </div>
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <i class="fa fa-align-justify"></i> Users List
+          </div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Username</th>
+                  <th>Date registered</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Yiorgos Avraamu</td>
+                  <td>2012/01/01</td>
+                  <td>Member</td>
+                  <td>
+                    <span class="badge badge-success">Active</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" (click)="delete('1')">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Avram Tarasios</td>
+                  <td>2012/02/01</td>
+                  <td>Staff</td>
+                  <td>
+                    <span class="badge badge-danger">Banned</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" (click)="delete('2')">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Quintin Ed</td>
+                  <td>2012/02/01</td>
+                  <td>Admin</td>
+                  <td>
+                    <span class="badge badge-secondary">Inactive</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" (click)="delete('3')">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Enéas Kwadwo</td>
+                  <td>2012/03/01</td>
+                  <td>Member</td>
+                  <td>
+                    <span class="badge badge-warning">Pending</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" (click)="delete('4')">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Agapetus Tadeáš</td>
+                  <td>2012/01/21</td>
+                  <td>Staff</td>
+                  <td>
+                    <span class="badge badge-success">Active</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" (click)="delete('5')">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+    </div>
+  </div>
+  
