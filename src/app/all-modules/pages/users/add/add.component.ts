@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../../../services';
+import { AuthService } from '@app/services';
 
 @Component({
   selector: 'app-add',
@@ -77,6 +77,11 @@ export class AddComponent implements OnInit {
     this.auth.register(this.userForm.value).subscribe((res:any)=>{
       console.log(res);
     })
+  }
+  reset()
+  {
+    this.submited = false;
+    this.userForm.reset();
   }
 
   

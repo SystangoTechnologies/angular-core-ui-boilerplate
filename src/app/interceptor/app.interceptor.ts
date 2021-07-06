@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {AuthService,DataService} from '../services';
+import {AuthService} from '@app/services';
+import {DataService} from '@shared/services';
 import { EMPTY } from 'rxjs';
 import {
   HttpRequest,

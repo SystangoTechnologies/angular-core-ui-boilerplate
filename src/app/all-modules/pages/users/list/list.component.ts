@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AlertService } from '../../../../services';
+import { Component, OnInit,ViewChild } from '@angular/core';
+import { AlertService } from '@shared/services';
+import { CommonModalComponent } from '@shared/components';
 
 @Component({
   selector: 'app-list',
@@ -7,14 +8,23 @@ import { AlertService } from '../../../../services';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
-  constructor(private alert:AlertService) { }
+  @ViewChild(CommonModalComponent) commonModal:CommonModalComponent
+  constructor() { }
 
   ngOnInit(): void {
   }
   delete(id)
   {
-    let apiUrl = '/delete';
-    this.alert.deletePopup(id,apiUrl);
+    this.commonModal.show();
+  }
+
+  confirmDelete()
+  {
+    // perform your action on confirm from the confirmation popup. 
+      
+      /*-------->action<-------*/ 
+
+    // hide modal after successfully delete
+    this.commonModal.hide();
   }
 }

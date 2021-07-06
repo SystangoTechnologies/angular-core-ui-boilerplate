@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Endpoints } from './../config';
 import { Router } from '@angular/router';
-import { ApiService } from './api.service';
+import { ApiService } from '../shared/services';
 import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
